@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card</title>
+  <link rel="icon" type="image/png" href="KenTheCoder.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #1f1f1f, #2e2e2e, #3c3c3c);
+    animation: gradientShift 15s ease infinite;
+}
+
+    .card {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 255, 208, 0.3);
+      text-align: center;
+      max-width: 350px;
+      color: #ffffff;
+      backdrop-filter: blur(6px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 40px rgba(0, 255, 208, 0.5);
+    }
+
+    .card img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid #00ffd5;
+      object-fit: cover;
+      margin-bottom: 15px;
+      box-shadow: 0 0 12px rgba(0, 255, 208, 0.4);
+    }
+
+    .info {
+      margin-bottom: 15px;
+      padding: 12px;
+      border: 1px solid #00ffd5;
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 10px rgba(0, 255, 208, 0.1);
+    }
+
+    .info-title {
+      font-weight: 600;
+      color: #00ffd5;
+    }
+
+    .info-content {
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    /* Smooth fade-in on page load */
+.card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+/* Glowing hover effect on name */
+.info:first-of-type .info-content {
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.info:first-of-type .info-content:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #00ffd5, 0 0 12px #00ffd5;
+  transform: scale(1.05);
+}
+
+/* Contact Me Button */
+.contact-btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00ffd5;
+  color: #000;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0, 255, 208, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(0, 255, 208, 0.6);
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    @media (max-width: 500px) {
+      .card {
+        max-width: 90%;
+        padding: 20px;
+      }
+    }
+
+    @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="Ken Vista.jpg" alt="Ken Humphrey V. Vista">
+    <div class="info">
+      <div class="info-title">Name</div>
+      <div class="info-content">Ken Humphrey V. Vista</div>
+    </div>
+    <div class="info">
+      <div class="info-title">Address</div>
+      <div class="info-content">Nancalobasaan, Urdaneta City, Pangasinan</div>
+    </div>
+    <div class="info">
+      <div class="info-title">Birthday</div>
+      <div class="info-content">October 10, 2003</div>
+    </div>
+    <div class="info">
+      <div class="info-title">Age</div>
+      <div class="info-content">21 Years Old</div>
+    </div>
+    <div class="info">
+      <div class="info-title">Contact</div>
+      <div class="info-content">+63 929 163 2505</div>
+      <a href="mailto:kenv63581@gmail.com" class="contact-btn">Contact Me</a>
+    </div>
+  </div>
+</body>
+</html>

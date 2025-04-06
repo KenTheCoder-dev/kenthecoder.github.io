@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="KenTheCoder.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+
+    .highlight {
+      color: #00ffd5;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-container {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #00ffd0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      animation: fadeSlide 1s ease forwards;
+    }
+
+    .about-img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #00ffd0;
+      box-shadow: 0 0 20px #00ffd0;
+    }
+
+    .about-text {
+      max-width: 600px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 25px;
+      border-radius: 15px;
+      color: #ffffff;
+      font-size: 16px;
+      line-height: 1.8;
+      box-shadow: 0 0 10px rgba(0, 255, 208, 0.3);
+      backdrop-filter: blur(6px);
+    }
+
+    .experience-grid {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .experience-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 2px solid #00ffd5;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 350px;
+      box-shadow: 0 0 15px #00ffd5;
+      transition: transform 0.3s ease;
+    }
+
+    .experience-card:hover {
+      transform: scale(1.05);
+    }
+
+    .experience-icon {
+      color: #00ffd5;
+      margin-bottom: 15px;
+    }
+
+    .experience-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .experience-text {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #e0f7fa;
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-img {
+        width: 180px;
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col items-center justify-center fade-in">
+    <img src="Ken.jpg" alt="Ken's Profile" class="rounded-full w-52 h-52 object-cover border-4 border-cyan-400 shadow-lg mb-6">
+    <h1 class="text-4xl font-semibold mb-3">Hi, I'm <span class="highlight">Ken Vista</span></h1>
+    <p class="text-xl font-medium">BSIT Student • Future Front-End Developer • Web Designer.</p>
+    <p class="text-lg mt-2 text-gray-300 max-w-xl px-4">Passionate about web design and eager to grow. Welcome to my portfolio where creativity meets clean code.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="fade-in section-container">
+    <h2 class="section-title">About Me:</h2>
+    <div class="about-content">
+      <img src="Ken Vista.jpg" alt="Ken Vista" class="about-img" />
+      <div class="about-text">
+        <p>
+          Hello! I'm <strong>Ken Humphrey V. Vista</strong> from the Philippines 🇵🇭<br><br>
+          A passionate <span class="highlight">BSIT student</span> and aspiring <span class="highlight">Front-End Developer</span> with a dream to build amazing websites and help my family. I specialize in turning simple ideas into beautiful designs and clean code.<br><br>
+          With the support of my beloved Janey 💕, I'm on a journey to learn, grow, and take on the digital world—one pixel at a time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+<section id="skills" class="fade-in section-container">
+  <h2 class="section-title">My Skills:</h2>
+  <div class="skills-wrapper">
+    <div class="skill-card">
+      <i class="fa-brands fa-html5 skill-icon"></i>
+      <h3 class="skill-title">HTML & CSS</h3>
+      <p class="skill-text">Solid foundation in structuring and styling clean, responsive websites.</p>
+    </div>
+    <div class="skill-card">
+      <i class="fa-brands fa-square-js skill-icon"></i>
+      <h3 class="skill-title">JavaScript</h3>
+      <p class="skill-text">Learning JavaScript for dynamic web interactions and creative functionality.</p>
+    </div>
+    <div class="skill-card">
+      <i class="fa-solid fa-paintbrush skill-icon"></i>
+      <h3 class="skill-title">UI/UX Design</h3>
+      <p class="skill-text">Basic understanding of user-centered design and visual hierarchy.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .skill-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    border-radius: 16px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 208, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .skill-icon {
+    font-size: 40px;
+    color: #00ffd5;
+    margin-bottom: 12px;
+  }
+  
+  .skill-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #00ffd5;
+    font-weight: 600;
+  }
+  
+  .skill-text {
+    font-size: 15px;
+    color: #ddd;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 768px) {
+    .skills-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .services-content {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+  
+.service-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #00ffd0;
+  border-radius: 15px;
+  padding: 30px 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 208, 0.3);
+  transition: transform 0.3s ease;
+}
+  
+.service-card:hover {
+  transform: scale(1.05);
+}
+  
+.service-icon {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #00ffd0;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+.project-card {
+  background-color: #121212;
+  border-radius: 18px;
+  overflow: hidden;
+  max-width: 320px;
+  box-shadow: 0 0 20px rgba(0, 255, 208, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 208, 0.4);
+}
+
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.project-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #00ffd5;
+}
+
+.project-info p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.project-btn {
+  background-color: #00ffd5;
+  color: black;
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.project-btn:hover {
+  background-color: #00cbb1;
+}
+
+.timeline-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .timeline-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 255, 208, 0.2);
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .timeline-icon {
+    font-size: 24px;
+    color: #00ffd5;
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+  .timeline-content h3 {
+    margin: 0;
+    color: #00ffd5;
+    font-size: 20px;
+  }
+
+  .timeline-content p {
+    margin-top: 5px;
+    color: #ddd;
+    font-size: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .timeline-item {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .testimonials-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 25px;
+  border-radius: 12px;
+  width: 300px;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 255, 208, 0.3);
+  transition: transform 0.3s ease;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+}
+
+.testimonial-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #00ffd0;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.role {
+  font-size: 14px;
+  color: #00ffd5;
+  margin-bottom: 10px;
+}
+
+.testimonial-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.contact-item {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 12px;
+  width: 220px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 255, 208, 0.2);
+}
+
+.contact-icon {
+  font-size: 24px;
+  color: #00ffd5;
+  margin-bottom: 10px;
+}
+
+.contact-link {
+  color: #00ffd5;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+  padding: 20px;
+}
+
+  </style>
+
+  <!-- Experience Section -->
+  <section id="experience" class="fade-in section-container">
+    <h2 class="section-title">Experience:</h2>
+    <div class="experience-grid">
+      <div class="experience-card">
+        <i class="fa-solid fa-code fa-2x experience-icon"></i>
+        <h3 class="experience-title">Web Design Beginner</h3>
+        <p class="experience-text">Currently learning HTML, CSS, and JavaScript with a strong focus on building clean, elegant UIs and improving every single day.</p>
+      </div>
+      <div class="experience-card">
+        <i class="fa-solid fa-id-card fa-2x experience-icon"></i>
+        <h3 class="experience-title">Profile Card Project</h3>
+        <p class="experience-text">Created a custom "Profile Card" with unique visuals and subtle animations and personalized styling as part of my midterm activity, using only HTML and CSS.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+<section id="services" class="fade-in section-container">
+  <h2 class="section-title">My Services:</h2>
+  <div class="services-content">
+    <div class="service-card">
+      <i class="fas fa-paint-brush service-icon"></i>
+      <h3>Web Design</h3>
+      <p>Creating visually appealing and user-friendly website layouts with modern aesthetics.</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-code service-icon"></i>
+      <h3>Front-End Development</h3>
+      <p>Developing responsive and interactive interfaces using HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="service-card">
+      <i class="fas fa-user-check service-icon"></i>
+      <h3>UI/UX Basics</h3>
+      <p>Designing intuitive experiences that make user interaction smooth and enjoyable.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="fade-in section-container">
+  <h2 class="section-title">My Projects:</h2>
+  <div class="projects-container">
+    
+    <!-- Project Card 1 -->
+    <div class="project-card">
+      <img src="Ken Vista.jpg" alt="Project 1" class="project-img">
+      <div class="project-info">
+        <h3>Profile Card Project</h3>
+        <p>Our school "Midterm Activity" where I designed a simple, elegant profile card with animations.</p>
+        <a href="Profile Card Midterm Activity.html" class="project-btn" target="_blank">View Project:</a>
+      </div>
+    </div>
+
+    <!-- Project Card 2 (Add more below if needed) -->
+    <!--
+    <div class="project-card">
+      <img src="your-second-project.jpg" alt="Project 2" class="project-img">
+      <div class="project-info">
+        <h3>Project Title</h3>
+        <p>Brief description of the project.</p>
+        <a href="#" class="project-btn">View Project</a>
+      </div>
+    </div>
+    -->
+
+  </div>
+</section>
+
+<!-- Timeline Section -->
+<section id="timeline" class="fade-in section-container">
+  <h2 class="section-title">My Journey:</h2>
+  <div class="timeline-wrapper">
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fas fa-code"></i>
+      </div>
+      <div class="timeline-content">
+        <h3>Febuary 2025 - Started Learning</h3>
+        <p>Explored HTML & CSS basics and began practicing with small web projects.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fas fa-laptop"></i>
+      </div>
+      <div class="timeline-content">
+        <h3>April 2025 - Created My First Project</h3>
+        <p>Built a custom Profile Card with animations and a unique theme.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fas fa-rocket"></i>
+      </div>
+      <div class="timeline-content">
+        <h3>Current - Building This Portfolio</h3>
+        <p>Designing and developing a professional and animated portfolio with Janey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="fade-in section-container">
+  <h2 class="section-title">What People Say:</h2>
+  <div class="testimonials-container">
+    <div class="testimonial-card">
+      <img src="Jacob.jpg" alt="Jacob Cass" class="testimonial-img" />
+      <h3>Jacob Cass</h3>
+      <p class="role">Graphic Design Expert</p>
+      <p class="testimonial-text">
+        "Your logo is the key to your brand's identity. It's the face of your company and the first impression you make."
+      </p>
+    </div>
+    <div class="testimonial-card">
+      <img src="Chris.jpg" alt="Chris Coyier" class="testimonial-img" />
+      <h3>Chris Coyier</h3>
+      <p class="role">Founder of CSS-Tricks</p>
+      <p class="testimonial-text">
+        "Design isn’t just what it looks like and feels like. Design is how it works."
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="fade-in section-container">
+  <h2 class="section-title">Contact Me:</h2>
+  <div class="contact-container">
+    <div class="contact-item">
+      <i class="fas fa-envelope contact-icon"></i>
+      <p>kenv63581@gmail.com</p>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-phone contact-icon"></i>
+      <p>09291632505</p>
+    </div>
+    <div class="contact-item">
+      <i class="fab fa-facebook contact-icon"></i>
+      <p><a href="https://facebook.com/vistaken" target="_blank" class="contact-link">Ken Vista</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="fade-in section-container">
+  <p>&copy; 2025 <span class="highlight">K. Vista</span>. All rights reserved. Made with <span class="highlight">love & code</span> by Janey & Ken.</p>
+</footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+</body>
+</html>
